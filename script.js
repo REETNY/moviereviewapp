@@ -99,13 +99,22 @@ submit.addEventListener("click", async() => {
             </div>
             <div class="movie-details">
                 <span class="movie-name">${movie.title}</span>
-                <span class="movie-rating">${movie.vote_average}</span>
+                <span class="movie-rating">${numberFormater(movie.vote_average)}</span>
             </div>
             <div class="description">
                 <h4>Overview:</h4>
                 ${movie.overview}
             </div>
         `
+
+        function numberFormater(num){
+            const data = num.toString();
+            if(data.length === 1){
+                return `${num}.0`;
+            }else{
+                return `${num}`;
+            }
+        }
 
         const img = eachMovie.querySelector(".movie-rating");
         if(movie.vote_average > 7.5){
