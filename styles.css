@@ -142,6 +142,7 @@ body{
     height: 100%;
     scroll-behavior: smooth;
     overflow: auto;
+    scrollbar-width: none;
     background: rgb(238, 238, 238,.8);
     box-shadow: 0px 0px 1px 1px rgb(0,.3, 0, 0);
     padding: 10px 10px;
